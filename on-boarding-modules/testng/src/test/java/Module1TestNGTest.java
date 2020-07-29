@@ -61,6 +61,12 @@ public class Module1TestNGTest {
          * https://ondemand.eu-central-1.saucelabs.com/wd/hub
          * */
         driver = new RemoteWebDriver(new URL("http://ondemand.saucelabs.com:80/wd/hub"), capabilities);
+        
+        private void printSessionId() {
+            String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
+                                           (((RemoteWebDriver) driver).getSessionId()).toString(), "TEST JENKINS CHEL");
+            System.out.println(message);
+        } 
 
         //navigate to the url of the Sauce Labs Sample app
         driver.navigate().to("https://www.saucedemo.com");
