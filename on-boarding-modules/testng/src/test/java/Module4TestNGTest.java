@@ -91,7 +91,7 @@ public class Module4TestNGTest {
     }
     
      @Test
-    public void shouldOpenChrome() {
+    public void shouldOpenFirefox() {
         /** Don't forget to enter in your application's URL in place of 'https://www.saucedemo.com'. */
         driver.navigate().to("https://www.google.com");
         Assert.assertTrue(true);
