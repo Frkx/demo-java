@@ -93,7 +93,7 @@ public class Module4TestNGTest {
     @AfterMethod
     public void cleanUpAfterTestMethod(ITestResult result) {
         String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
-                                       (((RemoteWebDriver) driver).getSessionId()).toString(), "JENKINS TEST CHEL");
+                                       (((RemoteWebDriver) driver).getSessionId()).toString(), "Module4TestNGTest");
         System.out.println(message);
         ((JavascriptExecutor)driver).executeScript("sauce:job-result=" + (result.isSuccess() ? "passed" : "failed"));
         driver.quit();
