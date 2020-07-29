@@ -90,6 +90,13 @@ public class Module4TestNGTest {
         Assert.assertTrue(false);
     }
     
+     @Test
+    public void shouldOpenChrome() {
+        /** Don't forget to enter in your application's URL in place of 'https://www.saucedemo.com'. */
+        driver.navigate().to("https://www.google.com");
+        Assert.assertTrue(true);
+    }
+    
     @AfterMethod
     public void cleanUpAfterTestMethod(ITestResult result) {
         String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
