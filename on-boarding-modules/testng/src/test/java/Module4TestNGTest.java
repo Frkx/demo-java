@@ -96,4 +96,11 @@ public class Module4TestNGTest {
         ((JavascriptExecutor)driver).executeScript("sauce:job-result=" + (result.isSuccess() ? "passed" : "failed"));
         driver.quit();
     }
+    
+    private void printSessionId() {
+ 
+    String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
+    (((RemoteWebDriver) driver).getSessionId()).toString(), "JENKINS TEST CHEL");
+    System.out.println(message);
+} 
 }
