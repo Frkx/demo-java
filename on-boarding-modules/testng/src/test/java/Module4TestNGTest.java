@@ -88,14 +88,9 @@ public class Module4TestNGTest {
         /** Don't forget to enter in your application's URL in place of 'https://www.saucedemo.com'. */
         driver.navigate().to("https://www.saucedemo.com");
         Assert.assertTrue(true);
-
-    }
-
-    @AfterMethod
-    private void printSessionId() {
-    String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
-    (((RemoteWebDriver) driver).getSessionId()).toString(), "JENKINS TEST CHEL");
-    System.out.println(message);
+        String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
+                                       (((RemoteWebDriver) driver).getSessionId()).toString(), "JENKINS TEST CHEL");
+        System.out.println(message);
     }
     
     @AfterMethod
